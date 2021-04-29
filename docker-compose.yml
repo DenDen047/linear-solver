@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  app:
+    image: denden047/linear-solver
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/workdir
+    working_dir: /workdir
+    command: /bin/bash -c "python test.py"
